@@ -15,7 +15,7 @@ public class MovementController : MonoBehaviour
 
     Rigidbody2D rb2D;
 
-    
+
     //enumerated constants to correspond to the values assigned to the animations
     enum CharStates
     {
@@ -50,14 +50,20 @@ public class MovementController : MonoBehaviour
         {
             animator.SetInteger(animationState, (int)CharStates.walkRight);
         }
-        else if(movement.x < 0)
+        else if (movement.x < 0)
+        {
+            animator.SetInteger(animationState, (int)CharStates.walkLeft);
+        }
+        else if (movement.y > 0)
+        {
+            animator.SetInteger(animationState, (int)CharStates.walkRight);
+        }
+        else if (movement.y < 0)
         {
             animator.SetInteger(animationState, (int)CharStates.walkLeft);
         }
         else
-        {
             animator.SetInteger(animationState, (int)CharStates.idle);
-        }
     }
 
     private void MoveCharacter()
@@ -68,6 +74,7 @@ public class MovementController : MonoBehaviour
         //        -1 = left key or "a"
         //         0 = no key pressed
         movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
         // keeps playing moving at the same rate of speed, no matter which direction they are moving in
         movement.Normalize();
