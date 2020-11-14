@@ -257,9 +257,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1174102393345417761, guid: d357514f4919f8342966234dd6339e3f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174102393345417761, guid: d357514f4919f8342966234dd6339e3f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174102393345417762, guid: d357514f4919f8342966234dd6339e3f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1174102393345417775, guid: d357514f4919f8342966234dd6339e3f, type: 3}
       propertyPath: m_Name
       value: Fairy_Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598942156470391892, guid: d357514f4919f8342966234dd6339e3f, type: 3}
+      propertyPath: movementSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d357514f4919f8342966234dd6339e3f, type: 3}
