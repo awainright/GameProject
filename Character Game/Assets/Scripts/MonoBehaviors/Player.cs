@@ -27,6 +27,9 @@ public class Player : Character
                         AdjustHitPoints(hitObject.quantity);
                         break;
 
+                    case Item.ItemType.KEY:
+                        break;
+
                     default:
                         break;
                 }

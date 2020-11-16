@@ -18,7 +18,8 @@ public class Item : ScriptableObject
     public enum ItemType
     {
         TREASURE,
-        HEALTH
+        HEALTH,
+        KEY
     }
 
     // Used to identify the item in game logic
