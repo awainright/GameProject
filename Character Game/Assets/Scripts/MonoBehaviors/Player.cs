@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : Character
 {
+    bool keyFlag = false;
     // Called when player's collider touches an "Is Trigger" collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,6 +29,7 @@ public class Player : Character
                         break;
 
                     case Item.ItemType.KEY:
+                        keyFlag = true;
                         break;
 
                     default:
@@ -37,6 +39,18 @@ public class Player : Character
                 // Hide the game object in the scene to give the illusion of picking up
                 collision.gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Gate") && keyFlag == true)
+        {
+            collision.gameObject.GetComponent<Animator>().SetBool("KeyObtained",true);
+
+            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            keyFlag = false;
         }
     }
 
