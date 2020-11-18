@@ -1,16 +1,25 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : Character
 {
+    public HitPoints hitPoints;
+
     // reference to health bar prefab
     public HealthBar healthBarPrefab;
 
     // a copy of the health bar prefab
     HealthBar healthBar;
 
-    // Start is called before the first fram update
-    public void Start()
+    // Part of MonoBehavior class; onEnable is called every time an object becomes both enabled and active
+    private void OnEnable()
+    {
+        ResetCharacter();
+    }
+
+    // ResetCharacter is called before the first frame update
+    public override void ResetCharacter()
     {
         // start the player off with starting hit point value
         hitPoints.value = startingHitPoints;
@@ -99,5 +108,43 @@ public class Player : Character
 
         // Return false if hit points is at max and can't be adjusted
         return false;
+    }
+
+    public override IEnumerator DamageCharacter(int damage, float interval)
+    {
+       // Continously inflict damage until loop breaks
+       while(true)
+       {
+            // Inflict damage
+            hitPoints.value = hitPoints.value - damage;
+
+            // Player is dead, kill game object and exit loop
+            if (hitPoints.value <= 0)
+            {
+                KillCharacter();
+                break;
+            }
+
+            if (interval > 0)
+            {
+                // Wait a specified amount of seconds & inflict more damage
+                yield return new WaitForSeconds(interval);
+            }
+            else
+            {
+                // Interval = 0; inflict one-time damage and exit loop
+                break;
+            }
+       }
+    }
+
+    public override void KillCharacter()
+    {
+        // Call KillCharacter in parent(Character) class, which will destroy the player game object
+        base.KillCharacter();
+
+        // Destroy health and inventory bars
+        Destroy(healthBar.gameObject);
+       // Destroy(inventory.gameObject); // error due to inventory not yet made
     }
 }
