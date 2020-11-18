@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : Character
 {
+    public Text WinText;
+    public Button RestartButton;
     bool keyFlag = false;
     // Called when player's collider touches an "Is Trigger" collider
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +25,7 @@ public class Player : Character
                 switch (hitObject.itemType)
                 {
                     case Item.ItemType.TREASURE:
+                        gameWon();
                         break;
 
                     case Item.ItemType.HEALTH:
@@ -40,6 +44,11 @@ public class Player : Character
                 collision.gameObject.SetActive(false);
             }
         }
+    }
+
+    public void gameWon(){
+        WinText.gameObject.SetActive(true);
+        RestartButton.gameObject.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
