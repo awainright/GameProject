@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 219345582926300203}
   - component: {fileID: 884395764708423386}
   - component: {fileID: 6765597956745714754}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: EnemySlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -218,4 +218,4 @@ MonoBehaviour:
   maxHitPoints: 2
   startingHitPoints: 2
   characterCategory: 1
-  damageStrength: 10
+  damageStrength: 2

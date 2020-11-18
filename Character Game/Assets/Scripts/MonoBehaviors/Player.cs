@@ -115,6 +115,9 @@ public class Player : Character
        // Continously inflict damage until loop breaks
        while(true)
        {
+           // Character flickers red
+           StartCoroutine(FlickerCharacter(interval));
+
             // Inflict damage
             hitPoints.value = hitPoints.value - damage;
 
@@ -128,6 +131,7 @@ public class Player : Character
             if (interval > 0)
             {
                 // Wait a specified amount of seconds & inflict more damage
+                StartCoroutine(IFrames(interval));
                 yield return new WaitForSeconds(interval);
             }
             else

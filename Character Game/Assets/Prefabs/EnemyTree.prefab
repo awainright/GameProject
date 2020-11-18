@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3936970115698295002}
   - component: {fileID: 3532438058553392699}
   - component: {fileID: 1199633146156215394}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: EnemyTree
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -218,4 +218,4 @@ MonoBehaviour:
   maxHitPoints: 10
   startingHitPoints: 10
   characterCategory: 1
-  damageStrength: 25
+  damageStrength: 5

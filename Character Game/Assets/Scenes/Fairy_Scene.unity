@@ -974,10 +974,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDwarf
       objectReference: {fileID: 0}
-    - target: {fileID: 8971666957384273996, guid: ebce03e0dddda2044aa1f59460e586ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebce03e0dddda2044aa1f59460e586ed, type: 3}
 --- !u!1001 &897361976
@@ -990,10 +986,6 @@ PrefabInstance:
     - target: {fileID: 3936970115698294981, guid: ac9f99889e9478547b791bbf4c9c0ff5, type: 3}
       propertyPath: m_Name
       value: EnemyTree
-      objectReference: {fileID: 0}
-    - target: {fileID: 3936970115698294981, guid: ac9f99889e9478547b791bbf4c9c0ff5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3936970115698295004, guid: ac9f99889e9478547b791bbf4c9c0ff5, type: 3}
       propertyPath: m_LocalPosition.x
