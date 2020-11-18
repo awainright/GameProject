@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 219345582926300205}
   - component: {fileID: 219345582926300202}
   - component: {fileID: 219345582926300203}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: EnemySlime
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 47795661
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4944230376442633554, guid: 95cba1032b526b84d9ed378da0777c5b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
