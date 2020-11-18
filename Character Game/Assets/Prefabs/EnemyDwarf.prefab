@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 8971666957384273985}
   - component: {fileID: 8971666957384273998}
   - component: {fileID: 8971666957384273999}
-  m_Layer: 11
+  - component: {fileID: 414874469}
+  m_Layer: 8
   m_Name: EnemyDwarf
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -134,13 +135,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8971666957384273996}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03349273, y: -0.0033624433}
+  m_Offset: {x: -0.021905191, y: -0.018416025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -151,7 +152,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19301453, y: 0.1832751}
+  m_Size: {x: 0.09452033, y: 0.08771777}
   m_EdgeRadius: 0
 --- !u!58 &8971666957384273998
 CircleCollider2D:
@@ -166,9 +167,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0347186, y: 0.082978934}
+  m_Offset: {x: -0.02, y: 0}
   serializedVersion: 2
-  m_Radius: 0.23599769
+  m_Radius: 0.59
 --- !u!114 &8971666957384273999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +186,19 @@ MonoBehaviour:
   wanderSpeed: 0
   directionChangeInterval: 1
   followPlayer: 1
+--- !u!58 &414874469
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971666957384273996}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.01}
+  serializedVersion: 2
+  m_Radius: 0.05
