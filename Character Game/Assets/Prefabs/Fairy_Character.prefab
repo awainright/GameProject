@@ -178,7 +178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 607b6625c7b8876119cc8833c52b1211, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 20
+  hitPoints: {fileID: 11400000, guid: 382edd68d7243ee45a106de44667f269, type: 2}
   maxHitPoints: 20
+  startingHitPoints: 5
+  characterCategory: 0
+  healthBarPrefab: {fileID: 4927546191568692753, guid: ab2f2963e84ae8d438ccd9ad422a5cf5, type: 3}
   WinText: {fileID: 0}
   RestartButton: {fileID: 0}

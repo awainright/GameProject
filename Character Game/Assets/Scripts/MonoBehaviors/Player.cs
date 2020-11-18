@@ -3,6 +3,25 @@ using UnityEngine.UI;
 
 public class Player : Character
 {
+    // reference to health bar prefab
+    public HealthBar healthBarPrefab;
+
+    // a copy of the health bar prefab
+    HealthBar healthBar;
+
+    // Start is called before the first fram update
+    public void Start()
+    {
+        // start the player off with starting hit point value
+        hitPoints.value = startingHitPoints;
+
+        // get a copy of the health bar prefab and store a reference to it
+        healthBar = Instantiate(healthBarPrefab);
+
+        // set the health bar's character property to this character so it can retrieve the maxHitPoints
+        healthBar.character = this;
+    }
+
     public Text WinText;
     public Button RestartButton;
     bool keyFlag = false;
@@ -22,6 +41,8 @@ public class Player : Character
                 // debugging
                 print("it: " + hitObject.objectName);
 
+                bool shouldDisappear = false;
+
                 switch (hitObject.itemType)
                 {
                     case Item.ItemType.TREASURE:
@@ -29,7 +50,7 @@ public class Player : Character
                         break;
 
                     case Item.ItemType.HEALTH:
-                        AdjustHitPoints(hitObject.quantity);
+                        shouldDisappear = AdjustHitPoints(hitObject.quantity);
                         break;
 
                     case Item.ItemType.KEY:
@@ -39,9 +60,12 @@ public class Player : Character
                     default:
                         break;
                 }
-
-                // Hide the game object in the scene to give the illusion of picking up
-                collision.gameObject.SetActive(false);
+                if (shouldDisappear)
+                {
+                    // Hide the game object in the scene to give the illusion of picking up
+                    collision.gameObject.SetActive(false);
+                }
+                
             }
         }
     }
@@ -63,16 +87,17 @@ public class Player : Character
         }
     }
 
-    public void AdjustHitPoints(int amount)
+    public bool AdjustHitPoints(int amount)
     {
-        if( hitPoints == maxHitPoints )
+        // Don't increase above the max amount
+        if (hitPoints.value < maxHitPoints)
         {
-            print("At maximum health of: " + maxHitPoints);
-        } 
-        else
-        {
-            hitPoints = hitPoints + amount;
+            hitPoints.value = hitPoints.value + amount;
             print("Adjusted hitpoints by: " + amount + ". New value: " + hitPoints);
+            return true;
         }
+
+        // Return false if hit points is at max and can't be adjusted
+        return false;
     }
 }
