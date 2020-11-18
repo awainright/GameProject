@@ -64,6 +64,7 @@ public class Player : Character
 
                     case Item.ItemType.KEY:
                         keyFlag = true;
+                        shouldDisappear = true;
                         break;
 
                     default:
