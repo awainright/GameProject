@@ -7,7 +7,8 @@ public class Restart : MonoBehaviour
 {
 
     public void restart(){
-        SceneManager.LoadScene("Fairy_Scene");
+        SceneManager.UnloadScene("Fairy_Scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     
 }

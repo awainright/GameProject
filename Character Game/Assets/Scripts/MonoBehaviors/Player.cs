@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class Player : Character
 {
-
     public Text WinText;
     public Text LossText;
     public Button RestartButton;
@@ -90,6 +89,7 @@ public class Player : Character
     }
 
     public void gameWon(){
+        
         WinText.gameObject.SetActive(true);
         RestartButton.gameObject.SetActive(true);
     }
@@ -164,6 +164,7 @@ public class Player : Character
     }
 
     public void gameOver(){
+      
         LossText.gameObject.SetActive(true);
         RestartButton.gameObject.SetActive(true);
     }
