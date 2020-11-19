@@ -25390,13 +25390,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1342845301}
     - target: {fileID: 1567266314, guid: d357514f4919f8342966234dd6339e3f, type: 3}
-      propertyPath: RestartButton
-      value: 
-      objectReference: {fileID: 648001132}
-    - target: {fileID: 1567266314, guid: d357514f4919f8342966234dd6339e3f, type: 3}
       propertyPath: LossText
       value: 
       objectReference: {fileID: 643245472}
+    - target: {fileID: 1567266314, guid: d357514f4919f8342966234dd6339e3f, type: 3}
+      propertyPath: RestartButton
+      value: 
+      objectReference: {fileID: 648001132}
     - target: {fileID: 1174102393345417761, guid: d357514f4919f8342966234dd6339e3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.53
