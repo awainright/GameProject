@@ -17,6 +17,10 @@ public class Player : Character
     // a copy of the health bar prefab
     HealthBar healthBar;
 
+    public Inventory inventoryPrefab;
+
+    Inventory inventory;
+
     // Part of MonoBehavior class; onEnable is called every time an object becomes both enabled and active
     private void OnEnable()
     {
@@ -26,6 +30,8 @@ public class Player : Character
     // ResetCharacter is called before the first frame update
     public override void ResetCharacter()
     {
+        inventory = Instantiate(inventoryPrefab);
+
         // start the player off with starting hit point value
         hitPoints.value = startingHitPoints;
 
@@ -67,7 +73,7 @@ public class Player : Character
 
                     case Item.ItemType.KEY:
                         keyFlag = true;
-                        shouldDisappear = true;
+                        shouldDisappear = inventory.AddItem(hitObject);
                         break;
 
                     default:

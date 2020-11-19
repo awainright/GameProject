@@ -15,6 +15,9 @@ public class Item : ScriptableObject
     // Quantity of the item
     public int quantity;
 
+    // True = multiple copies of an item can be interacted with simultaneously (keys)
+    public bool stackable;
+
     public enum ItemType
     {
         TREASURE,
