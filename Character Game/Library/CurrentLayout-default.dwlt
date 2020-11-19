@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -343,20 +343,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\james\Desktop\UnityProject\GameProject\Character Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 443d0000
-    m_LastClickedID: 15684
+    m_SelectedIDs: 583d0000
+    m_LastClickedID: 15704
     m_ExpandedIDs: 000000003e3d0000403d0000423d0000443d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 14.428227, y: 26.657679, z: -439.134}
     speed: 2
-    m_Value: {x: 12.086984, y: 25.985056, z: -438.9167}
+    m_Value: {x: 14.428227, y: 26.657679, z: -439.134}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 50.46392
     speed: 2
-    m_Value: 48.290833
+    m_Value: 50.46392
   m_Ortho:
     m_Target: 1
     speed: 2
