@@ -4,6 +4,11 @@ using UnityEngine.UI;
 
 public class Player : Character
 {
+
+    public Text WinText;
+    public Text LossText;
+    public Button RestartButton;
+    bool keyFlag = false;
     public HitPoints hitPoints;
 
     // reference to health bar prefab
@@ -31,9 +36,7 @@ public class Player : Character
         healthBar.character = this;
     }
 
-    public Text WinText;
-    public Button RestartButton;
-    bool keyFlag = false;
+   
     // Called when player's collider touches an "Is Trigger" collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -126,6 +129,7 @@ public class Player : Character
             if (hitPoints.value <= 0)
             {
                 KillCharacter();
+                gameOver();
                 break;
             }
 
@@ -152,4 +156,10 @@ public class Player : Character
         Destroy(healthBar.gameObject);
        // Destroy(inventory.gameObject); // error due to inventory not yet made
     }
+
+    public void gameOver(){
+        LossText.gameObject.SetActive(true);
+        RestartButton.gameObject.SetActive(true);
+    }
+    
 }
