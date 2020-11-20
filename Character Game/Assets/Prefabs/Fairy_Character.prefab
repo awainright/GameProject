@@ -181,6 +181,7 @@ MonoBehaviour:
   maxHitPoints: 20
   startingHitPoints: 20
   characterCategory: 0
+  Quit: {fileID: 0}
   WinText: {fileID: 0}
   LossText: {fileID: 0}
   RestartButton: {fileID: 0}

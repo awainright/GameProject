@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class Player : Character
 {
+    public Button Quit;
     public Text WinText;
     public Text LossText;
     public Button RestartButton;
@@ -92,6 +93,7 @@ public class Player : Character
         
         WinText.gameObject.SetActive(true);
         RestartButton.gameObject.SetActive(true);
+        Quit.gameObject.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -167,6 +169,7 @@ public class Player : Character
       
         LossText.gameObject.SetActive(true);
         RestartButton.gameObject.SetActive(true);
+        Quit.gameObject.SetActive(true);
     }
     
 }
