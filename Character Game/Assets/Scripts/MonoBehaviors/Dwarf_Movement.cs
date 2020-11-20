@@ -46,6 +46,11 @@ public class Dwarf_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Exits the game if the user pushes the escape key.
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
 
     }
 
